@@ -1,0 +1,4 @@
+
+https://www.frankcleary.com/svdimage/
+
+https://cmdlinetips.com/2020/01/image-reconstruction-using-singular-value-decomposition-svd-in-python/
