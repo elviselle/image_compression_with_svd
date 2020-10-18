@@ -32,6 +32,17 @@
     		    <input id="ex6" style="width:100%;" type="text" data-slider-min="1" data-slider-max="685" data-slider-step="1" data-slider-value="0"/>
     		        	    <div class="col-sm">
 		        <img src="images/k.png"/> <span id="k" style="font-size:28px;">1</span><br/>
+		        <div style="position: relative; width: 168px; height: 252px">
+        			<div style="position: absolute; width: 168px; height: 168px; border: 1px solid; background-color: #5DADE2; left: 0px;" ></div>
+        			<div id="recU" style="position: absolute; width: 0px; height: 168px; border: 1px solid; background-color: #AED6F1; left: 0px;" ></div>
+        			<div style="position: absolute; left: 70px; top:60px; font-size:20px">U</div>
+        			<div style="position: absolute; width: 252px; height: 168px; border: 1px solid; background-color: #52BE80; left: 178px;" ></div>
+        			<div id="recS" style="position: absolute; width: 0px; height: 00px; border: 1px solid; background-color: #A9DFBF; left: 178px;" > </div>
+        			<div style="position: absolute; left: 268px; top:60px; font-size:20px" >Sigma</div>
+        			<div style="position: absolute; width: 252px; height: 252px; border: 1px solid; background-color: #F4D03F; left: 440px;" ></div>
+        			<div id="recV" style="position: absolute; width: 252px; height: 0px; border: 1px solid; background-color: #F9E79F; left: 440px;" > </div>
+        			<div style="position: absolute; left: 560px; top:60px; font-size:20px" >V'</div>
+    			</div>
 		        <img src="images/sigmak.png"/> <span id="sigmak" style="font-size:28px;">0</span><br/>
 		        <div class="row" style="margin:5px;">
 		            <div>
@@ -2956,6 +2967,14 @@ function init() {
 				$("#k").text(slideEvt.value);
 // 				console.log("idx now: " + slideEvt.value);	
 // 				console.log("data now: " + norm_data[slideEvt.value]);	
+
+				ratio=0.246;
+				widthU = slideEvt.value * ratio;
+				heightV = 
+				strWU = widthU + "px";
+				$("#recU").css({"width":strWU});
+				$("#recS").css({"width":strWU, "height":strWU });
+				$("#recV").css({"height":strWU});
 
 				$("#sigmak").text(sigma_values[slideEvt.value][1]);       //with header
 				$("#norm").text(norm_sigmak1_psnr[slideEvt.value-1][1]);
